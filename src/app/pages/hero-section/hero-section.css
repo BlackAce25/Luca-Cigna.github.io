@@ -1,0 +1,43 @@
+.hero-nav {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* immagine di sfondo */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('https://placehold.co/1200x800') center/cover no-repeat;
+    z-index: 0;
+}
+
+/* polygon colorato */
+.hero-polygon {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(86,
+                156, 214, 0.6), rgba(30, 30, 47, 1));
+    clip-path: polygon(
+            100% 0,
+            35% 0,
+            60% 50%,
+            35% 100%,
+            100% 100%);
+    z-index: 1;
+}
+
+/* testo */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--var-primary);
+}
+
+.borderPrimary {
+    border: 25px solid var(--var-primary);
+}

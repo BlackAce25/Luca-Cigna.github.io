@@ -1,0 +1,53 @@
+<mat-toolbar color="primary" class="nav-height" [ngClass]="{'sticky': isSticky}">
+    <!-- Logo -->
+    <button mat-button class="logo btn-bg-primary">Luca Cigna</button>
+
+    <!-- Link centrali (desktop) -->
+    <div class="toolbar-container desktop-only">
+        <button mat-raised-button class="btn-bg-primary" (click)="scrollToWhoAmI()">Chi Sono</button>
+        <button mat-raised-button class="btn-bg-primary" (click)="scrollToSkills()">Competenze</button>
+        <button mat-raised-button class="btn-bg-primary" (click)="scrollToExperience()">Esperienze</button>
+        <button mat-raised-button class="btn-bg-primary" (click)="scrollToContactMe()">Contattami</button>
+    </div>
+
+    <!-- Social (desktop) -->
+    <div class="social-links desktop-only">
+        <a href="https://facebook.com" target="_blank" class="btn-bg-primary">
+            <mat-icon>facebook</mat-icon>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="btn-bg-primary">
+            <mat-icon>business</mat-icon>
+        </a>
+        <a href="https://github.com" target="_blank" class="btn-bg-primary">
+            <mat-icon>share</mat-icon>
+        </a>
+    </div>
+
+    <!-- Hamburger -->
+    <button mat-icon-button class="mobile-menu" (click)="toggleMenu()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+
+<!-- Placeholder per evitare che la navbar copra contenuto -->
+<div [style.height.px]="isSticky ? navbarHeight : 0"></div>
+
+<!-- Dropdown menu mobile (fuori dalla toolbar) -->
+<div class="mobile-dropdown" [ngClass]="{'active': menuOpen}">
+    <button mat-raised-button class="btn-bg-primary" (click)="scrollToWhoAmI(); toggleMenu()">Chi Sono</button>
+    <button mat-raised-button class="btn-bg-primary" (click)="scrollToSkills(); toggleMenu()">Competenze</button>
+    <button mat-raised-button class="btn-bg-primary" (click)="scrollToExperience(); toggleMenu()">Esperienze</button>
+    <button mat-raised-button class="btn-bg-primary" (click)="scrollToContactMe(); toggleMenu()">Contattami</button>
+
+    <div class="social-links">
+        <a href="https://facebook.com" target="_blank" class="btn-bg-primary">
+            <mat-icon>facebook</mat-icon>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="btn-bg-primary">
+            <mat-icon>business</mat-icon>
+        </a>
+        <a href="https://github.com" target="_blank" class="btn-bg-primary">
+            <mat-icon>share</mat-icon>
+        </a>
+    </div>
+</div>

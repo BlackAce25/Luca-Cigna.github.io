@@ -1,0 +1,28 @@
+.cv-footer {
+    background-color: var(--var-primary);
+    color: var(--var-secondary);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+    /* importante per evitare overflow */
+}
+
+.cv-footer .footer-content,
+.cv-footer .footer-note {
+    display: flex;
+    flex-wrap: wrap;
+    /* permette ai link di andare a capo */
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.cv-footer a {
+    color: var(--var-secondary);
+    text-decoration: none;
+}
+
+.cv-footer a:hover {
+    text-decoration: underline;
+}

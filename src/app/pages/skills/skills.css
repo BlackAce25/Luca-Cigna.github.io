@@ -1,0 +1,36 @@
+.skills {
+    width: 70%;
+    margin: 2rem auto;
+    text-align: left;
+    padding-top: 1rem;
+    /* lasciare che l'altezza sia automatica */
+}
+
+/* Accordion card */
+.mat-expansion-panel {
+    margin-bottom: 1rem;
+    /* distanza tra i pannelli */
+}
+
+/* Header centrato con icona a destra */
+.mat-expansion-panel-header {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    position: relative;
+}
+
+.mat-expansion-panel-header .mat-panel-title {
+    text-align: center;
+    flex: none;
+}
+
+.mat-expansion-panel-header .mat-expansion-indicator {
+    position: absolute;
+    right: 16px;
+}
+
+.skills .bg-headers {
+    padding: 1rem 0;
+    /* aumenta lo spazio sopra e sotto il titolo */
+}

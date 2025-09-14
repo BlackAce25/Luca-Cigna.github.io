@@ -1,0 +1,20 @@
+.container {
+    width: 70%;
+    margin: 2rem auto;
+    text-align: left;
+}
+
+.contact-card {
+    padding: 1rem;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.contact {
+    min-height: 50vh;
+    /* minimo 50% dell’altezza viewport */
+    height: auto;
+}

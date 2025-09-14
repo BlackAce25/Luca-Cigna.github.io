@@ -1,0 +1,71 @@
+/* Contenitore principale della sezione Chi Sono */
+.whoAmI {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Titolo centrato */
+.whoAmI .bg-headers {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+/* Contenitore card */
+.whoAmI .cards-container {
+    width: 70%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: space-between;
+}
+
+/* Card singola */
+.whoAmI mat-card {
+    flex: 1 1 48%;
+    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    border: 2px solid var(--var-primary);
+    min-width: 300px;
+}
+
+/* Contenuto della card con scrollbar interna se necessario */
+.whoAmI mat-card mat-card-content {
+    overflow-y: auto;
+    padding-right: 1rem;
+    word-wrap: break-word;
+}
+
+/* Media query dispositivi medi / tablet */
+@media (max-width: 1200px) {
+    .whoAmI .cards-container {
+        width: 90%;
+    }
+
+    .whoAmI mat-card {
+        width: 100%;
+        max-height: 60vh;
+        margin-bottom: 1rem;
+        flex: 1 1 100%;
+    }
+}
+
+/* Media query mobile (meno di 768px) */
+@media (max-width: 767px) {
+    .whoAmI .cards-container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .whoAmI mat-card {
+        width: 100%;
+        max-height: 70vh;
+    }
+}

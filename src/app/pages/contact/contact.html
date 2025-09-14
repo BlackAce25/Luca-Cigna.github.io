@@ -1,0 +1,46 @@
+<!-- Titolo -->
+<div class="contact" id="contactMe-section">
+    <div class="bg-headers r-25 text-center" style="width: 70%; margin: 0 auto; padding: 1rem;">
+        <strong class="p-2 bg-headers">
+            <h2>Contattami</h2>
+        </strong>
+    </div>
+
+    <div class="container">
+        <mat-card class="contact-card">
+            <mat-card-content>
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Nome</mat-label>
+                        <input matInput placeholder="Inserisci il tuo nome" formControlName="name">
+                        <mat-error *ngIf="contactForm.get('name')?.invalid && submitted">
+                            Il nome è obbligatorio
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Inserisci la tua email" formControlName="email">
+                        <mat-error *ngIf="contactForm.get('email')?.invalid && submitted">
+                            Inserisci una email valida
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Messaggio</mat-label>
+                        <textarea matInput rows="5" placeholder="Scrivi qui il messaggio"
+                            formControlName="message"></textarea>
+                        <mat-error *ngIf="contactForm.get('message')?.invalid && submitted">
+                            Il messaggio è obbligatorio
+                        </mat-error>
+                    </mat-form-field>
+
+                    <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">
+                        <mat-icon>send</mat-icon> Invia
+                    </button>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
